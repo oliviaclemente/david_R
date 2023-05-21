@@ -1,0 +1,573 @@
+---
+title:"TRABAJO DE ESTADISTICA"
+author:"David Garcia"
+Date:"22/05/2022"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  word_document: default
+---
+```{r}
+```
+
+
+```{r}
+```
+
+### TRABAJO DE ESTADISTICA
+## Despues de haber elegido el data frame que en mi caso ha sido el de "MEJORES FOTOGRAFIAS DE LA GALA DE LOS OSCARS", lo primero que habia que hacer es limpiar el csv
+#El csv llamado "movies.csv" es el csv original descargado de la pagina web "Kaggle" y el siguiente paso seria filtrar las variables.
+En el csv movies.csv estan presentes las siguientes variables:
+Film,Oscar Year,Film Studio/Producer,Award,Year_of_Release,Movie Time,Movie Genre,IMDB Rating,IMDB_Votes,Movie Info,Genres,Critic Consensus,Content Rating,Directors,Authors,Actors,Original Release Date,Streaming Release Date,Production Company,Tomatometer Status,Tomatometer Rating,Tomatometer Count,Audience Status,Audience Rating,Audience Count,Tomatometer Top Critics Count,Tomatometer Fresh Critics Count,Tomatometer Rotten Critics Count,Film ID
+Al final nos quedamos con el nuevo csv, llamado "oscars.csv", que tienelas siguientes variables que son las que nos interesan.
+He elegido las siguientes variables:
+Cualitativas:movies: Film, Movie.Genre
+Cuantitativas:movies: IMDB.Rating, IMDB_Votes Audience.Count, Movie.Time
+```{R, echo= FALSE}
+#preprocesamos el csv y seleccionamos las columnas que nos interesan
+library(dplyr)
+
+# Leemos el archivo CSV
+movies <- read.csv("movies.csv")
+
+
+# Seleccionamos las columnas deseadas
+movies_select <- select(movies, Film, Movie.Genre,
+IMDB.Rating, Audience.Count, Movie.Time)
+
+# Escribimos el nuevo dataframe en un nuevo archivo CSV
+write.csv(movies_select, "oscars.csv", row.names = FALSE)
+#pasamos de movies.csv a oscars.csv
+
+#
+
+```
+##Pero al limpiar este csv nos encontramos con otro problema que es que en los dartos IMDB_Votes, los numeros estaban entre comillas y entonces no leia los numeros al interpretarlos como cadenas de texto
+#Por lo que puse el siguiente codigo
+
+
+
+
+```{R, echo= FALSE}
+#crear un data frame a partir del fichero csv limpiado llamado
+#"oscars" con separador de campos "," y separador de decimales adecuado.
+library(tidyverse)
+library(readr)
+library(dplyr)
+#1
+#crear un data frame a paritr del fichero oscars2.csv con separador
+#de campos "," y separador de decimales adecuado.
+df <- read_csv("oscars2.csv", col_types = cols())
+df
+```
+## Y ahora ya podemos empezar a trabajar con el data frame "oscars" que es el que nos interesa, y empezamos con los requisitos que nos pide el trabajo.
+#Primero creamos el data frame llamado df, 
+
+```{R, echo= FALSE}
+#1
+library(tidyverse)
+library(readr)
+library(dplyr)
+#crear un data frame a paritr del fichero oscars2.csv
+#con separador de campos "," y separador de decimales adecuado
+df <- read_csv("oscars2.csv", col_types = cols())
+df
+
+```
+
+## #3 generar columnas nuevas (numericas, cadena, booleanas) a partir de las columnas existentes 
+#3.1 Crear una nueva columna que es la suma de IMDB.Rating y Movie.Time.
+
+```{R, echo= FALSE}
+df <- df %>%
+  mutate(Sum_Rating_Time = IMDB.Rating + Movie.Time)
+df
+```
+
+#3.2 Crear una nueva columna que es la concatenación de Film y Award.
+
+```{R, echo= FALSE}
+df <- df %>%
+  mutate(Film_and_Award = paste(Film, Award, sep = " - "))
+df
+```
+
+#3.3 Crear una nueva columna que es TRUE si IMDB.Rating es mayor que 7, y FALSE en caso contrario.
+```{R, echo= FALSE}
+df <- df %>%
+  mutate(High_Rating = IMDB.Rating > 7)
+df
+```
+
+## 4 Generar nuevas columnas a partir de recodificacion de otras columnas
+#4.1Crear una nueva columna que recodifica IMDB.Rating en una variable categórica.
+
+```{R, echo= FALSE}
+df <- df %>%
+  mutate(Rating_Category = case_when(
+    IMDB.Rating >= 8 ~ "High",
+    IMDB.Rating >= 6 ~ "Medium",
+    TRUE ~ "Low"
+  ))
+  df
+```
+#4.2  Crear una nueva columna que recodifica Award en una variable binaria (TRUE si es "Best Picture", FALSE en caso contrario).
+```{R, echo= FALSE}
+df <- df %>%
+  mutate(Award_Binary = case_when(
+    Award == "Winner" ~ "Won",
+    TRUE ~ "Not Won"
+  ))
+df
+```
+## Aplicar filtros
+#5.1 Filtrar las filas donde Award es "Winner"
+```{R, echo= FALSE}
+df_winner <- df %>%
+  filter(Award == "Winner")
+df_winner
+```
+#5.2 Filtrar y ver las filas donde Award es "Winner" y IMDB.Rating es mayor que 7
+```{R, echo= FALSE}
+df_winner_high_rating <- df %>%
+  filter(Award == "Winner", IMDB.Rating > 7)
+df_winner_high_rating
+```
+#5.3Filtrar y ver las filas donde Year_of_Release es menor que 1950 o mayor que 2000
+```{R, echo= FALSE}
+df_old_or_new <- df %>%
+  filter(Year_of_Release < 1950 | Year_of_Release > 2000)
+df_old_or_new
+```
+## 6 tablas de frecuencias cualitativas
+#6.1 una sola variable cualitativa, 'Award'
+```{R, echo= FALSE}
+table(df$Award)
+```
+#6.2varias variables cualitativas, 'Award' y 'Movie.Genre':
+```{R, echo= FALSE}
+table(df$Award, df$Movie.Genre)
+```
+## 6.3 ACUMULADAS
+#Calcular la tabla de frecuencias de 'Award'
+```{R, echo= FALSE}
+freq <- table(df$Award)
+freq
+```
+
+#Calcular las frecuencias acumuladas
+```{R, echo= FALSE}
+cum_freq <- cumsum(freq)
+cum_freq
+
+```
+#Imprimir las frecuencias acumuladas
+```{R, echo= FALSE}
+print(cum_freq)
+```
+## 8.1calcular los principales estadisticos de las variables cualitativas
+#cuantitativas simples y  agrupando segun una o varias variables cualitativas e interpretalos
+## IMDB.Rating
+```{R, echo= FALSE}
+mean(df$IMDB.Rating, na.rm = TRUE)
+# media=7.570403                               
+median(df$IMDB.Rating, na.rm = TRUE)
+#mediana= 7.6                                  
+#desviacion estandar=0.5596518
+min(df$IMDB.Rating, na.rm = TRUE)
+#minimo=5.6                                  
+max(df$IMDB.Rating, na.rm = TRUE)
+#maximo=9.3  
+quantile(df$IMDB.Rating, na.rm = TRUE)
+#cuartiles=  0%  25%  50%  75% 100%
+            #5.6  7.3  7.6  7.9  9.3
+```
+## INTERPRETACION
+#Media: El valor medio de las calificaciones IMDB es de aproximadamente 7.57. Esto indica que, en promedio, las películas en tu conjunto de datos tienen una calificación IMDB de 7.57.
+
+#Mediana: La mediana de las calificaciones IMDB es 7.6, lo que significa que el 50% de las calificaciones IMDB están por debajo de 7.6 y el 50% están por encima.
+
+#Mínimo y máximo: La calificación IMDB más baja en tu conjunto de datos es 5.6, mientras que la más alta es 9.3.
+
+#Cuartiles: Los cuartiles te dan una idea de la distribución de las calificaciones IMDB en tu conjunto de datos. El primer cuartil (25%) es 7.3
+lo que significa que el 25% de las calificaciones están por debajo de 7.3. El tercer cuartil (75%) es 7.9, lo que significa que el 75% de las calificaciones están por debajo de 7.9. La mediana (50% o el segundo cuartil), como mencionamos antes, es 7.6.
+# la media está muy cerca de la mediana, lo que sugiere que la distribución de las calificaciones puede ser bastante simétrica.
+
+## Movie.Time
+```{R, echo= FALSE}
+mean(df$Movie.Time, na.rm = TRUE)
+#media= 124.8949          
+median(df$Movie.Time, na.rm = TRUE)
+#mediana=121               
+sd(df$Movie.Time, na.rm = TRUE)
+#desviacion estandar=26.32282        
+min(df$Movie.Time, na.rm = TRUE)
+#minimo=66                       
+max(df$Movie.Time, na.rm = TRUE)
+#maximo=238                     
+quantile(df$Movie.Time, na.rm = TRUE)
+#cuartiles=  0%   25%   50%   75%  100%
+           #66.0 107.0 121.0 136.5 238.0
+```
+##INTERPRETACION
+#Media: La duración media de las películas es de aproximadamente 124.89 minutos. Esto indica que, en promedio, las películas en tu conjunto de datos duran unos 124.89 minutos.
+
+#Mediana: La mediana de las duraciones de las películas es de 121 minutos, lo que significa que la mitad de las películas duran menos de 121 minutos y la otra mitad dura más.
+
+#Desviación estándar: La desviación estándar es de aproximadamente 26.32 minutos, lo que indica la variabilidad o dispersión de las duraciones de las películas alrededor de la media. En otras palabras, en promedio, las duraciones de las películas difieren de la media en unos 26.32 minutos.
+
+3Mínimo y máximo: La duración de la película más corta en tu conjunto de datos es de 66 minutos, mientras que la más larga es de 238 minutos.
+
+#Cuartiles: Los cuartiles te dan una idea de la distribución de las duraciones de las películas en tu conjunto de datos. El primer cuartil (25%) es 107, lo que significa que el 25% de las películas duran menos de 107 minutos. El tercer cuartil (75%) es 136.5, lo que significa que el 75% de las películas duran menos de 136.5 minutos. La mediana (50% o el segundo cuartil) es 121 minutos, como mencionamos antes.
+
+
+## AHORA PARA LAS VARIABLES CUALITATIVAS
+#Para las variables cualitativas, puedes usar table() para obtener las frecuencias de cada categoría. Por ejemplo, para la variable Award:
+```{R, echo= FALSE}
+table(df$Award)
+aggregate(df$IMDB.Rating ~ df$Award, FUN = mean, na.rm = TRUE)
+#Nominee       7.528870
+#  Winner       7.783871
+```
+## INTERPRETACION
+Por lo tanto, las películas que ganaron un premio Oscar tienden a tener una calificación media de IMDB más alta en comparación con las que solo fueron nominadas. Esto puede sugerir que las películas que ganan un premio Oscar tienden a ser mejor recibidas por los espectadores, al menos según las calificaciones de IMDB.
+
+##Realizar diagramas de barras o lineas simples agrupando segun una variable cualitativa  e interpretarlos
+# Crear el diagrama de barras
+# Asumiendo que 'Award' es tu columna que indica si la película es un "Ganador" o "Nominado"
+```{R, echo= FALSE}
+library(ggplot2)
+ggplot(df, aes(x=Movie.Genre, fill=Award)) + 
+  geom_bar() +
+  xlab("Género") +
+  ylab("Número de películas") +
+  ggtitle("Número de películas por género") +
+  labs(fill = "Estado del premio")
+
+```
+## INTERPRETACION
+#cada barra representa un género de película diferente. La altura de la barra representa el número de películas en ese género.
+
+
+###Para un diagrama de líneas que muestre la calificación promedio de IMDB por año, puedes usar el siguiente código
+#'Year_of_Release' es la columna del año de lanzamiento de la película
+```{R, echo= FALSE}
+df$Year_of_Release <- as.numeric(df$Year_of_Release)
+
+# Calcular la calificación promedio de IMDB por año
+avg_rating <- aggregate(IMDB.Rating ~ Year_of_Release, data = df, FUN = mean)
+
+# Crear el diagrama de líneas
+ggplot(avg_rating, aes(x=Year_of_Release, y=IMDB.Rating, color="Calificación promedio de IMDB")) +
+  geom_line() +
+  xlab("Año de lanzamiento") +
+  ylab("Calificación promedio de IMDB") +
+  ggtitle("Calificación promedio de IMDB por año de lanzamiento") +
+  scale_color_manual(values="black", labels="Calificación promedio de IMDB", name="")
+
+```
+## INTERPRETACION
+#En este diagrama, el eje x representa el año de lanzamiento y el eje y representa la calificación promedio de IMDB.  # nolint: line_length_linter.
+# La línea muestra cómo ha cambiado la calificación promedio de IMDB a lo largo del tiempo. Si la línea tiene una tendencia ascendente,        # nolint: line_length_linter.
+# eso podría indicar que las películas han tendido a tener calificaciones más altas en años más recientes. Si la línea tiene una tendencia descendente, eso podría indicar que las películas han tendido a tener calificaciones más bajas en años más recientes.
+
+
+##Realizar histogramas e interpretarlos
+```{R, echo= FALSE}
+library(ggplot2)
+
+# Crear el histograma
+ggplot(df, aes(x=IMDB.Rating)) +
+  geom_histogram(bins=30, fill="blue", color="black") +
+  xlab("Calificación IMDB") +
+  ylab("Número de películas") +
+  ggtitle("Distribución de las calificaciones IMDB") +
+  annotate("text", x=8, y=10, label="Las barras azules representan el número de películas", hjust=1)
+```
+## INTERPRETACION
+En este histograma, el eje x representa la calificación de IMDB y el eje y representa el número de películas. Cada barra representa el número de películas que tienen una calificación de IMDB dentro del rango especificado por esa barra. 
+
+#La interpretación del histograma se basa en su forma y los valores que presenta. Si el histograma tiene una forma simétrica, como una distribución normal o gaussiana, esto indica que los valores están igualmente distribuidos alrededor de la media. Si el histograma está sesgado hacia la derecha o hacia la izquierda, esto indica que los valores tienden a ser más altos o más bajos, respectivamente. Además, cualquier pico o hueco en el histograma  indica la presencia de subgrupos dentro de los datos. 
+
+#El histograma de las calificaciones de IMDB tiene una forma simétrica, esto podría indicar que la mayoría de las películas tienen una calificación media, con pocas películas con calificaciones muy altas o muy bajas. El histograma está sesgado hacia la derecha, esto podría indicar que la mayoría de las películas tienen calificaciones bajas, pero hay algunas películas con calificaciones muy altas. 
+
+
+###realizar diagramas de cajas simples y agrupando segun una variable cualitativa e interpretarlos
+#comparar las calificaciones de IMDB entre las películas ganadoras y no ganadoras de un premio Oscar
+```{R, echo= FALSE}
+library(ggplot2)
+
+# Crear el diagrama de cajas y bigotes
+ggplot(df, aes(x=Award, y=IMDB.Rating)) +
+  geom_boxplot(fill="blue", color="black") +
+  xlab("Estado del premio Oscar") +
+  ylab("Calificación IMDB") +
+  ggtitle("Comparación de las calificaciones de IMDB entre las películas ganadoras y no ganadoras del Oscar")
+```
+##INTERPRETACION
+#El eje x representa el estado del premio Oscar (ganador o no ganador) y el eje y representa la calificación de IMDB. Cada boxplot muestra la mediana (la línea en el medio de la caja), los cuartiles Q1 y Q3 (los bordes inferior y superior de la caja, respectivamente), y los valores atípicos (los puntos por encima o por debajo de los bigotes). 
+
+#La interpretación del diagrama se basa en la posición y la propagación de la caja, y la presencia de valores atípicos. Si una caja es más alta en el eje y, esto indica que las calificaciones de IMDB son más altas para ese grupo. Si una caja es más larga, esto indica que hay una mayor variabilidad en las calificaciones de IMDB para ese grupo. Los valores atípicos pueden indicar calificaciones de IMDB que son inusualmente altas o bajas. 
+
+#las películas ganadoras del Oscar es más alto y tiene menos valores atípicos que el de las películas no ganadoras, esto podría sugerir que las películas ganadoras tienden a tener calificaciones de IMDB más altas y más consistentes.
+
+##Construir modelos de regresion lineales simples y agrupando segun una o varias variables cualitativas he interpretarlos
+#La regresión lineal es una técnica estadística que nos permite explorar y estudiar la relación entre dos o más características de un conjunto de datos. En R,se usa la función lm() para ajustar un modelo de regresión lineal a tus datos. 
+#En R, el paquete principal para la construcción de modelos de regresión lineal es lm() del paquete básico de estadísticas. Como ejemplo, vamos a construir un modelo de regresión lineal simple que prediga la calificación de IMDB basándose en el tiempo de película. # nolint: line_length_linter.
+# Ajustar el modelo de regresión lineal
+```{R, echo= FALSE}
+model <- lm(IMDB.Rating ~ Movie.Time, data = df)
+summary(model)
+```
+##recta de regresion
+```{R, echo= FALSE}	
+# Primero, creamos un gráfico de dispersión de los datos
+plot(df$Movie.Time, df$IMDB.Rating,
+     main="Regresión lineal de IMDB.Rating vs Movie.Time",
+     xlab="Duración de la película (minutos)", ylab="Calificación IMDB",
+     pch=19, frame=FALSE, col="blue")
+
+# A continuación, agregamos la recta de regresión al gráfico
+# Usamos los coeficientes del modelo para hacer esto
+abline(model$coefficients, col="red")
+
+```
+
+
+##INTWEPRETACION
+#Call: Esta es la llamada a la función que se utilizó para ajustar el modelo. En este caso, se ajustó un modelo de regresión lineal con IMDB.Rating como variable de respuesta y Movie.Time como predictor.
+
+#Residuals: Los residuos son las diferencias entre los valores observados y los valores predichos por el modelo. Los residuos mínimos, el primer cuartil (1Q), la mediana, el tercer cuartil (3Q) y los residuos máximos indican la distribución de los residuos.
+
+#Coefficients: Los coeficientes son las estimaciones de los parámetros del modelo. En este caso, el intercepto es 6.7940783, lo que significa que cuando Movie.Time es 0, se predice que IMDB.Rating es 6.7940783. El coeficiente para Movie.Time es 0.0062158, lo que significa que por cada unidad adicional de Movie.Time, se predice que IMDB.Rating aumentará en 0.0062158.
+
+#Signif. codes: Los códigos de significación indican la significación estadística de los coeficientes. En este caso, ambos coeficientes son muy significativos (p < 0.001), lo que indica que hay una relación fuerte entre Movie.Time y IMDB.Rating.
+
+#Residual standard error: Este es una medida de la variabilidad de los residuos. Un error estándar residual más pequeño indica que los residuos son más cercanos a 0, lo que sugiere que el modelo se ajusta bien a los datos.
+
+#Multiple R-squared: Este es una medida de cuánta variabilidad en IMDB.Rating se puede explicar por Movie.Time. En este caso, alrededor del 8.547% de la variabilidad en IMDB.Rating se puede explicar por Movie.Time.
+
+#F-statistic: La estadística F se utiliza para probar la hipótesis nula de que todos los coeficientes de regresión son iguales a cero. Un valor de p pequeño para la estadística F indica que al menos uno de los coeficientes de regresión es significativamente diferente de cero.
+
+#En resumen, este modelo sugiere que hay una relación significativa entre la duración de la película y la calificación de IMDB. Sin embargo, la duración de la película solo explica una pequeña proporción de la variabilidad en la calificación de IMDB (alrededor del 8.547%).
+
+##Predecir la calificación de IMDB basándote en si la película ganó un premio o no
+```{R, echo= FALSE}
+# Convertir la variable 'Award' a un factor
+df$Award <- as.factor(df$Award)
+
+# Ajustar el modelo de regresión lineal
+model2 <- lm(IMDB.Rating ~ Award, data = df)
+
+# Resumen del modelo
+summary(model2)
+```
+
+##INTERPRETACION
+#Coefficients: El coeficiente de AwardWinner es 0.25500. Esto significa que, en promedio, una película que ha ganado un premio tiene una calificación en IMDB que es 0.25500 unidades mayor que una película que no ha ganado un premio, manteniendo todo lo demás constante.
+
+#Residuals:  Aquí puedes ver que la mediana es cercana a 0, lo que indica que el modelo es bastante preciso en general. Sin embargo, los mínimos y máximos muestran que hay algunas películas cuyas calificaciones son significativamente diferentes a lo que el modelo predice.
+
+3Signif. codes:  Ambos coeficientes son significativos al nivel de 0.001, lo que indica que ambos son significativamente diferentes de cero con una alta confianza.
+
+#R-squared:  R cuadrado es 0.02836, lo que significa que solo alrededor del 2.836% de la variación en las calificaciones de IMDB se explica por si la película ganó un premio o no.
+
+#F-statistic y p-value:  En este caso, con un p-value de 5.256e-05, puedes rechazar la hipótesis nula de que ninguno de los coeficientes es significativamente diferente de cero.
+#este modelo sugiere que ganar un premio está asociado con una calificación de IMDB más alta. Sin embargo, solo un pequeño porcentaje de la variación en las calificaciones de IMDB se puede explicar por si una película ganó un premio o no.
+
+
+
+#recta de regresion
+
+#Dado que la variable "Award" es categórica y no numérica, no puedes trazar una "recta de regresión" en el sentido tradicional. Sin embargo, puedes representar visualmente la relación entre la variable categórica y la variable dependiente.
+```{R, echo= FALSE}
+# Crear un boxplot para cada categoría
+boxplot(IMDB.Rating ~ Award, data = df, 
+        main = "Boxplots de calificaciones IMDB por categoría de Premio", 
+        xlab = "Categoría de Premio", 
+        ylab = "Calificación IMDB")
+
+# Añadir puntos de datos individuales
+stripchart(IMDB.Rating ~ Award, vertical = TRUE, data = df, 
+           method = "jitter", add = TRUE, pch = 20, col = 'blue')
+
+```
+#
+En este gráfico, cada "caja" representa la distribución de las calificaciones IMDB para cada categoría de premio. Puedes ver el efecto medio de ganar un premio en la calificación IMDB por la diferencia en la posición de las cajas para cada categoría.
+
+Este tipo de gráfico es apropiado para comparar visualmente las medias de dos o más grupos cuando los datos son categóricos,
+
+##Comparar diferentes modelos de regresión puede ayudarte a decidir cuál de ellos es el mejor para explicar tu variable dependiente en función de las variables independientes.
+```{R, echo= FALSE}
+# Ajustar dos modelos de regresión
+model1 <- lm(IMDB.Rating ~ Movie.Time, data = df)
+model2 <- lm(IMDB.Rating ~ Movie.Time + Year_of_Release, data = df)
+# Comparar los modelos
+anova(model1, model2)
+# Obtener AIC y BIC
+AIC(model1, model2)
+BIC(model1, model2)
+#En este código, ajustamos dos modelos de regresión lineal: model1, que incluye Movie.Time como variable independiente, y model2, que incluye tanto Movie.Time como Year_of_Release como variables independientes. Luego, usamos la función anova() para realizar una prueba de la razón de verosimilitud y las funciones AIC() y BIC() para obtener los valores de AIC y BIC para los modelos.
+```
+##INTERPRETACION:
+#La función anova(model1, model2) realiza una prueba de hipótesis para comparar los dos modelos. La hipótesis nula es que ambos modelos se ajustan igualmente bien a los datos, y la hipótesis alternativa es que el modelo2, el más complejo, se ajusta mejor a los datos. Aquí, el valor p (1.129e-11, que es muy pequeño) rechaza la hipótesis nula, lo que significa que el modelo2 se ajusta significativamente mejor a los datos que el modelo1.
+
+#Luego, se calculan los valores de AIC y BIC para los dos modelos. AIC y BIC son criterios de información que se utilizan para comparar modelos. En ambos casos, los valores más bajos son mejores. Según los valores de AIC y BIC, el modelo2 es el modelo preferido, ya que tiene valores más bajos en ambos criterios, lo que significa que proporciona un mejor equilibrio entre la bondad de ajuste del modelo y la complejidad del modelo.
+
+#Por lo tanto, la interpretación general de estos resultados es que, según las pruebas de hipótesis, AIC y BIC, el modelo que incluye tanto 'Movie.Time' como 'Year_of_Release' como variables predictoras proporciona un mejor ajuste a los datos.
+
+
+##Hacer predicciones con un modelo de regresion 
+```{R, echo= FALSE}
+# Ajustar un modelo de regresión lineal a los datos
+model <- lm(IMDB.Rating ~ Movie.Time, data = df)
+
+# Hacer predicciones con el modelo
+predictions <- predict(model, newdata = df)
+
+# Mostrar las predicciones
+print(predictions)
+```
+INTERPRETACION:
+# las predicciones de la calificación IMDB para cada película en el conjunto de datos basada en el tiempo de la película. Las predicciones se realizaron utilizando un modelo de regresión lineal simple, donde la calificación IMDB (IMDB.Rating) es la variable dependiente y el tiempo de la película (Movie.Time) es la variable independiente.
+
+#La primera película en el conjunto de datos (índice 1), la calificación IMDB predicha es 7.689157, basada en su tiempo de duración.
+
+###REQUISITOS EXTRA
+##1 pivotar el data frame de formato ancho a largo o viceversa
+```{R, echo= FALSE}
+library(tidyverse)
+
+# Para pivotar de formato ancho a largo:
+df_long <- df %>% pivot_longer(cols = c(IMDB_Votes, IMDB.Rating, Movie.Time), names_to = "Variable", values_to = "Value")
+df_long
+```
+
+##Realizar diagramas (barras histogramas , diagramas de cajas o sectores) agrupado con facetas
+##Diagrama de barras con facetas:
+#se crea un gráfico de barras que muestra el número de películas por año, separado en facetas por género de película.
+```{R, echo= FALSE}
+ggplot(df, aes(x=Year_of_Release)) + 
+  geom_bar() + 
+  facet_wrap(~Movie.Genre)
+
+```
+
+
+##Histograma con facetas:
+#se crea un histograma de calificaciones de IMDB, dividido en facetas por género de película.
+```{R, echo= FALSE}
+ggplot(df, aes(x=IMDB.Rating)) + 
+  geom_histogram(binwidth=0.5) +
+  facet_wrap(~Movie.Genre)
+
+
+```
+
+
+##Diagrama de cajas (Boxplot) con facetas:
+#se crea un diagrama de cajas de calificaciones de IMDB por género de película, dividido en facetas por tipo de premio Oscar.
+```{R, echo= FALSE}
+ggplot(df, aes(x=Movie.Genre, y=IMDB.Rating)) + 
+  geom_boxplot() +
+  facet_wrap(~Award)
+
+```
+
+##comparar la distribucion observada de una variable cuantitativa discreta con su distribucion teorica a partir de sus percentiles # nolint: line_length_linter. # Supongamos que 'IMDB.Rating' es la variable cuantitativa discreta
+```{R, echo= FALSE}
+library(ggplot2)
+
+# Luego, creamos el gráfico Q-Q
+qqnorm(df$IMDB.Rating, main="Gráfico Q-Q para la calificación de IMDB")
+qqline(df$IMDB.Rating, col="red")  # añade la línea de la distribución teórica normal
+```
+#Si la distribución de los datos es cercana a la normal, los puntos en el gráfico Q-Q seguirán aproximadamente la línea roja. Si se alejan significativamente de esta línea en alguna parte, indica que los datos no se distribuyen normalmente en esa región.
+#vemos que mas o menos si se ajusta a la linea roja
+
+##Comparar la distribucion observada de una variable cuantitativa continua con su distribucion teorica a partir de sus percentiles
+```{R, echo= FALSE}
+library(ggplot2)
+
+# Luego, creamos el gráfico Q-Q
+qqnorm(df$Movie.Time, main="Gráfico Q-Q para la duración de las películas")
+qqline(df$Movie.Time, col="red")  # añade la línea de la distribución teórica normal
+```
+#tambien se ajusta mas o menos 
+
+##Programar funciones para automatizar el analisis de datos
+```{R, echo= FALSE}
+# Definir la función desc_stats()
+desc_stats <- function(df, column) {
+  mean_val <- mean(df[[column]], na.rm = TRUE)
+  median_val <- median(df[[column]], na.rm = TRUE)
+  sd_val <- sd(df[[column]], na.rm = TRUE)
+  min_val <- min(df[[column]], na.rm = TRUE)
+  max_val <- max(df[[column]], na.rm = TRUE)
+  
+  result <- list(mean = mean_val, median = median_val, sd = sd_val, min = min_val, max = max_val)
+  return(result)
+}
+
+# Crear un data frame con los datos
+df <- data.frame(
+  Film = "Wings",
+  Movie.Genre = "Drama,Romance,War",
+  Award = "Winner",
+  Year_of_Release = 1927,
+  IMDB_Votes = 12221,
+  IMDB.Rating = 7.5,
+  Movie.Time = 144
+)
+
+# Calcular estadísticas descriptivas para la columna "Movie.Time" del data frame
+movie_time_stats <- desc_stats(df, "Movie.Time")
+
+# Imprimir las estadísticas descriptivas
+print(movie_time_stats)
+
+#Esta función devuelve una lista con las estadísticas descriptivas calculadas. Puedes acceder a cada estadística individualmente utilizando el nombre de la estadística como índice. Por ejemplo, desc_stats(df, "Movie.Time")$mean me dará la media de la columna "Movie.Time". 
+```
+##Esta es una función para calcular el número de valores faltantes (NA) en cada columna de un dataframe:
+```{R, echo= FALSE}
+# Función para contar valores faltantes
+count_na <- function(df) {
+  na_count <- sapply(df, function(y) sum(length(which(is.na(y)))))
+  na_count <- data.frame(na_count)
+  names(na_count)[1] <- "na_count"
+  return(na_count)
+}
+# Para usar la función en tu dataframe df:
+count_na(df)
+```
+
+##simular un experimento aleatorio mediante la generacion de numeros aleatorios a partir de una distribucion discreta y describir su variable resultante 
+#Podríamos simular un experimento aleatorio basado en la distribución de estos valores.
+#Este código generará números aleatorios de una distribución normal con la misma media y desviación estándar que la variable "IMDB.Rating" del data frame. Luego, se calcularán las estadísticas descriptivas (media, mediana, desviación estándar, mínimo y máximo) de la variable resultante y se imprimirán en la consola.
+```{R, echo= FALSE}
+# Generar números aleatorios de una distribución continua (normal)
+simulated_ratings <- rnorm(n = nrow(df), mean = mean(df$IMDB.Rating), sd = sd(df$IMDB.Rating))
+
+# Describir la variable resultante
+desc_stats <- function(df) {
+  mean <- mean(df, na.rm = TRUE)
+  median <- median(df, na.rm = TRUE)
+  sd <- sd(df, na.rm = TRUE)
+  min <- min(df, na.rm = TRUE)
+  max <- max(df, na.rm = TRUE)
+
+  list(mean = mean, median = median, sd = sd, min = min, max = max)
+}
+
+# Obtener estadísticas descriptivas de la variable resultante
+result_stats <- desc_stats(simulated_ratings)
+
+# Imprimir las estadísticas descriptivas
+print(result_stats)
+```
+
+
+
+
+
