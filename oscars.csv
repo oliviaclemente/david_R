@@ -1,0 +1,572 @@
+"Film","Movie.Genre","IMDB.Rating","Audience.Count","Movie.Time"
+"Wings","Drama,Romance,War",7.5,3530,144
+"7th Heaven","Drama,Romance",7.7,NA,110
+"The Racket","Crime,Drama,Film-Noir",6.7,NA,84
+"The Broadway Melody","Drama,Musical,Romance",5.7,1813,100
+"Alibi","Action,Crime,Romance",5.8,NA,91
+"Hollywood Revue","Comedy,Music",5.7,NA,130
+"In Old Arizona","Western",5.6,356,95
+"The Patriot","Drama,History,Thriller",7.4,NA,113
+"All Quiet on the Western Front","Drama,War",8.1,NA,152
+"The Big House","Crime,Drama,Thriller",7.1,323,87
+"Disraeli","Biography,Drama,History",6.2,NA,90
+"The Divorcee","Romance,Drama",6.7,NA,84
+"The Love Parade","Comedy,Musical,Romance",7,NA,107
+"Cimarron","Drama,Western",5.9,1514,123
+"East Lynne","Drama,Romance",5.9,NA,102
+"The Front Page","Comedy,Crime,Drama",6.8,NA,101
+"Skippy","Comedy,Drama,Family",6.3,NA,85
+"Trader Horn","Action,Adventure,Drama",6.3,NA,122
+"Grand Hotel","Drama,Romance",7.4,7014,112
+"Arrowsmith","Drama",6.2,NA,108
+"Bad Girl","Drama,Romance",6.5,NA,90
+"The Champ","Drama,Sport",7.3,617,86
+"Five Star Final","Crime,Drama",7.3,NA,89
+"One Hour with You","Comedy,Musical,Romance",7.2,NA,78
+"Shanghai Express","Adventure,Drama,Romance",7.3,NA,82
+"The Smiling Lieutenant","Comedy,Romance,Musical",7.2,NA,93
+"Cavalcade","Drama,Romance,War",5.9,1027,112
+"42nd Street","Comedy,Drama,Musical",7.4,7561,89
+"A Farewell to Arms","Drama,Romance,War",6.5,5697,80
+"I Am a Fugitive from a Chain Gang","Crime,Drama,Film-Noir",8.2,NA,92
+"Lady for a Day","Comedy,Drama",7.4,NA,96
+"Little Women","Drama,Family,Romance",7.2,9776,115
+"The Private Life of Henry VIII","Biography,Comedy,Drama",7.1,1295,97
+"She Done Him Wrong","Comedy,Drama,History",6.4,2240,66
+"Smilin' Through","Drama,Romance",6.9,NA,98
+"State Fair","Comedy,Drama,Romance",6.8,NA,99
+"It Happened One Night","Comedy,Romance",8.1,33678,105
+"The Barretts of Wimpole Street","Biography,Drama,Romance",7,335,109
+"Cleopatra","Biography,Drama,History",6.8,NA,100
+"Flirtation Walk","Musical,Romance",5.7,NA,97
+"The Gay Divorcee","Comedy,Musical,Romance",7.5,3378,107
+"Here Comes the Navy","Comedy,Drama,Romance",6.3,NA,87
+"The House of Rothschild","Biography,Drama,History",6.6,NA,88
+"Imitation of Life","Drama,Romance",7.5,4562,111
+"One Night of Love","Music,Romance",5.7,NA,84
+"The Thin Man","Comedy,Crime,Mystery",8,12999,91
+"Viva Villa!","Action,Biography,Romance",6.4,NA,115
+"The White Parade","Drama",6.8,NA,80
+"Mutiny on the Bounty","Adventure,Biography,Drama",7.7,8061,132
+"Alice Adams","Comedy,Drama,Romance",6.9,2419,99
+"Broadway Melody of 1936","Musical,Romance",6.8,NA,101
+"Captain Blood","Action,Adventure,History",7.7,8194,119
+"David Copperfield","Adventure,Drama,Romance",7.4,NA,130
+"The Informer","Crime,Drama",7.4,1081,91
+"The Lives of a Bengal Lancer","Adventure,Drama,War",7.1,NA,109
+"A Midsummer Night's Dream","Comedy,Fantasy,Romance",6.9,1229,133
+"Les Misérables","Drama,History,Romance",7.7,NA,108
+"Naughty Marietta","Drama,Musical,Romance",6.7,NA,105
+"Ruggles of Red Gap","Comedy,Romance,Western",7.6,NA,90
+"Top Hat","Comedy,Musical,Romance",7.8,9847,101
+"The Great Ziegfeld","Biography,Drama,Musical",6.7,2778,176
+"Anthony Adverse","Adventure,Drama,Romance",6.4,NA,141
+"Dodsworth","Drama,Romance",7.8,1466,101
+"Libeled Lady","Comedy,Romance",7.9,2696,98
+"Mr. Deeds Goes to Town","Comedy,Drama,Romance",7.9,9236,115
+"Romeo and Juliet","Drama,Romance",6.5,6,125
+"San Francisco","Drama,Musical,Romance",7.2,1337,115
+"The Story of Louis Pasteur","Biography,Drama,History",7.3,NA,86
+"A Tale of Two Cities","Drama,History,Romance",7.8,2145,128
+"Three Smart Girls","Comedy,Musical,Romance",6.7,474,84
+"The Life of Emile Zola","Biography,Drama",7.2,2348,116
+"The Awful Truth","Comedy,Romance",7.7,7597,90
+"Captains Courageous","Adventure,Drama,Family",8,3811,117
+"Dead End","Crime,Drama,Film-Noir",7.3,2021,93
+"The Good Earth","Drama,Romance",7.5,1100,138
+"In Old Chicago","Action,Drama,Musical",6.8,NA,95
+"Lost Horizon","Adventure,Drama,Fantasy",7.7,5550,132
+"One Hundred Men and a Girl","Comedy,Drama,Music",6.8,NA,84
+"Stage Door","Comedy,Drama",7.8,4809,92
+"A Star Is Born","Drama,Romance",7.3,2686,111
+"You Can't Take It with You","Comedy,Drama,Romance",7.9,NA,126
+"The Adventures of Robin Hood","Action,Adventure,Romance",7.9,33946,102
+"Alexander's Ragtime Band","Drama,Music,Musical",6.9,1421,106
+"Boys Town","Biography,Drama",7.3,4219,96
+"The Citadel","Drama",7.1,411,110
+"Four Daughters","Drama,Music,Romance",6.9,NA,90
+"Grand Illusion","Drama,War",8.1,NA,113
+"Jezebel","Drama,Romance",7.5,NA,104
+"Pygmalion","Comedy,Drama,Romance",7.8,NA,89
+"Test Pilot","Drama,Romance",6.9,NA,119
+"Gone with the Wind","Drama,History,Romance",8.1,NA,238
+"Dark Victory","Drama,Romance",7.5,5226,104
+"Goodbye, Mr. Chips","Drama,Romance",7.9,5661,114
+"Love Affair","Comedy,Drama,Romance",7.3,1666,88
+"Mr. Smith Goes to Washington","Comedy,Drama",8.1,45845,129
+"Ninotchka","Comedy,Romance",7.9,6822,110
+"Of Mice and Men","Adventure,Drama",7.9,7138,106
+"Stagecoach","Adventure,Drama,Western",7.9,14614,96
+"The Wizard of Oz","Adventure,Family,Fantasy",8,876327,102
+"Wuthering Heights","Drama,Romance",7.6,8786,104
+"Rebecca","Drama,Mystery,Romance",8.1,NA,130
+"All This, and Heaven Too","Drama,Romance",7.5,1048,141
+"Foreign Correspondent","Action,Romance,Thriller",7.5,6906,120
+"The Grapes of Wrath","Drama,History",8.1,24311,129
+"The Great Dictator","Comedy,Drama,War",8.4,43702,125
+"Kitty Foyle","Drama,Romance",6.9,937,108
+"The Letter","Crime,Drama,Film-Noir",7.6,3725,95
+"The Long Voyage Home","Drama,War",7,NA,105
+"Our Town","Drama,Romance",6.6,1291,90
+"The Philadelphia Story","Comedy,Romance",7.9,47191,112
+"How Green Was My Valley","Drama,Family",7.7,7950,118
+"Blossoms in the Dust","Biography,Drama,Romance",6.9,379,99
+"Citizen Kane","Drama,Mystery",8.3,159199,119
+"Here Comes Mr. Jordan","Comedy,Fantasy,Romance",7.6,1120,94
+"Hold Back the Dawn","Drama,Romance",7.4,NA,116
+"The Little Foxes","Drama,Romance",8,3522,116
+"The Maltese Falcon","Crime,Film-Noir,Mystery",8,57852,100
+"One Foot in Heaven","Biography,Drama",6.8,NA,108
+"Sergeant York","Biography,Drama,History",7.7,5674,134
+"Suspicion","Film-Noir,Mystery,Thriller",7.4,14737,99
+"Mrs. Miniver","Drama,Romance,War",7.6,6063,134
+"49th Parallel","Drama,Thriller,War",7.3,NA,123
+"Kings Row","Drama,Mystery,Romance",7.5,1081,127
+"The Magnificent Ambersons","Drama,Romance",7.7,6468,88
+"The Pied Piper","Drama,War",7.1,NA,87
+"The Pride of the Yankees","Biography,Drama,Romance",7.7,6839,128
+"Random Harvest","Adventure,Drama,Family",8,2805,126
+"The Talk of the Town","Comedy,Drama,Romance",7.5,3083,118
+"Wake Island","Action,Drama,War",6.8,NA,88
+"Yankee Doodle Dandy","Biography,Drama,Music",7.7,8136,126
+"Casablanca","Drama,Romance,War",8.5,357518,102
+"For Whom the Bell Tolls","Adventure,Drama,History",6.9,40,170
+"Heaven Can Wait","Comedy,Drama,Fantasy",7.4,4380,112
+"The Human Comedy","Comedy,Drama,Family",7,360,117
+"In Which We Serve","Drama,War",7.2,861,115
+"Madame Curie","Biography,Drama,Romance",7.2,495,124
+"The More the Merrier","Comedy,Romance,War",7.7,1310,104
+"The Ox-Bow Incident","Adventure,Drama,Western",8,NA,75
+"The Song of Bernadette","Biography,Drama",7.6,3262,156
+"Watch on the Rhine","Drama,Thriller",7.3,600,114
+"Going My Way","Comedy,Drama,Music",7.1,5784,126
+"Double Indemnity","Crime,Drama,Film-Noir",8.3,35764,107
+"Gaslight","Crime,Drama,Mystery",7.8,8527,114
+"Since You Went Away","Drama,Romance,War",7.5,NA,177
+"Wilson","Biography,Drama,History",6.4,NA,154
+"The Lost Weekend","Drama,Film-Noir",7.9,8866,101
+"Anchors Aweigh","Comedy,Fantasy,Music",7.1,8284,140
+"The Bells of St. Mary's","Drama",7.3,NA,126
+"Mildred Pierce","Crime,Drama,Film-Noir",8,8234,111
+"Spellbound","Film-Noir,Mystery,Romance",7.5,NA,111
+"The Best Years of Our Lives","Drama,Romance,War",8.1,10819,170
+"Henry V","Biography,Drama,History",7.1,NA,137
+"It's a Wonderful Life","Drama,Family,Fantasy",8.6,218883,130
+"The Razor's Edge","Drama,Romance",7.4,1905,145
+"The Yearling","Drama,Family,Western",7.2,3770,128
+"Gentleman's Agreement","Drama,Romance",7.2,5627,118
+"The Bishop's Wife","Comedy,Drama,Fantasy",7.6,NA,109
+"Crossfire","Crime,Drama,Film-Noir",7.3,1885,86
+"Great Expectations","Adventure,Drama,Mystery",7.8,NA,118
+"Miracle on 34th Street","Comedy,Drama,Family",7.9,47572,96
+"Hamlet","Drama",7.6,7542,154
+"Johnny Belinda","Drama",7.8,1429,102
+"The Red Shoes","Drama,Music,Romance",8.1,11766,135
+"The Snake Pit","Drama,Mystery",7.6,2656,108
+"The Treasure of the Sierra Madre","Adventure,Drama,Western",8.2,26122,126
+"All the King's Men","Drama,Film-Noir",7.5,4866,110
+"Battleground","Action,Drama,History",7.5,2737,118
+"The Heiress","Drama,Romance",8.2,NA,115
+"A Letter to Three Wives","Drama,Romance",7.7,3781,103
+"Twelve O'Clock High","Drama,War",7.7,6019,132
+"All About Eve","Drama",8.2,45248,138
+"Born Yesterday","Comedy,Drama,Romance",7.6,4780,103
+"Father of the Bride","Comedy,Romance",7.2,13901,92
+"King Solomon's Mines","Action,Adventure,Romance",6.8,3242,103
+"Sunset Boulevard","Drama,Film-Noir",8.4,53464,110
+"An American in Paris","Drama,Musical,Romance",7.2,26460,114
+"Decision Before Dawn","Drama,War",7.2,341,119
+"A Place in the Sun","Drama,Romance",7.8,8530,122
+"Quo Vadis","Biography,Drama,History",7.2,NA,171
+"A Streetcar Named Desire","Drama",8,55148,122
+"The Greatest Show on Earth","Drama,Family,Romance",6.6,6192,152
+"High Noon","Drama,Thriller,Western",8,25442,85
+"Ivanhoe","Adventure,Drama,History",6.8,5038,106
+"Moulin Rouge","Biography,Drama,Music",7.1,68249,119
+"The Quiet Man","Comedy,Drama,Romance",7.8,30417,129
+"From Here to Eternity","Drama,Romance,War",7.6,14883,118
+"Julius Caesar","Biography,Drama,History",7.3,5248,120
+"The Robe","Drama,History",6.8,6018,135
+"Roman Holiday","Comedy,Romance",8,63470,118
+"Shane","Drama,Western",7.6,15548,118
+"On the Waterfront","Crime,Drama,Thriller",8.1,52205,108
+"The Caine Mutiny","Drama,War",7.7,7557,124
+"The Country Girl","Drama,Music",7.3,3106,104
+"Seven Brides for Seven Brothers","Comedy,Drama,Musical",7.4,54305,102
+"Three Coins in the Fountain","Drama,Romance",6.3,2021,102
+"Marty","Drama,Romance",7.7,6757,90
+"Love Is a Many-Splendored Thing","Biography,Drama,Romance",6.5,NA,102
+"Mister Roberts","Comedy,Drama,War",7.7,6728,123
+"Picnic","Drama,Romance",7.1,2519,115
+"The Rose Tattoo","Comedy,Drama,Romance",7,1108,117
+"Around the World in 80 Days","Adventure,Comedy,Family",6.8,33440,175
+"Friendly Persuasion","Drama,Romance,War",7.4,1251,137
+"Giant","Drama,Western",7.6,24255,201
+"The King and I","Biography,Drama,Musical",7.4,61003,133
+"The Ten Commandments","Adventure,Drama",7.9,60242,220
+"The Bridge on the River Kwai","Adventure,Drama,War",8.1,54711,161
+"12 Angry Men","Crime,Drama",9,NA,96
+"Peyton Place","Drama,Romance",7.2,3106,157
+"Sayonara","Drama,Romance",7.1,NA,147
+"Witness for the Prosecution","Crime,Drama,Mystery",8.4,8968,116
+"Gigi","Comedy,Musical,Romance",6.7,20979,115
+"Auntie Mame","Comedy,Drama,Romance",7.9,8232,143
+"Cat on a Hot Tin Roof","Drama",8,31748,108
+"The Defiant Ones","Crime,Drama",7.6,5151,96
+"Separate Tables","Drama,Romance",7.4,1355,100
+"Ben-Hur","Adventure,Drama,History",8.1,106187,212
+"Anatomy of a Murder","Crime,Drama,Mystery",8,12375,161
+"The Diary of Anne Frank","Biography,Drama,Family",7.4,27953,180
+"The Nun's Story","Drama",7.6,5552,149
+"Room at the Top","Drama,Romance",7.5,NA,115
+"The Apartment","Comedy,Drama,Romance",8.3,38188,125
+"The Alamo","Adventure,Drama,History",6.8,7337,162
+"Elmer Gantry","Drama",7.8,NA,146
+"Sons and Lovers","Drama",7.1,NA,103
+"The Sundowners","Adventure,Drama",7.1,589,133
+"West Side Story","Crime,Drama,Musical",7.5,168990,153
+"Fanny","Drama,Romance",6.9,NA,134
+"The Guns of Navarone","Action,Adventure,Drama",7.5,20751,158
+"The Hustler","Drama,Sport",8,31217,134
+"Judgment at Nuremberg","Drama,War",8.2,NA,179
+"Lawrence of Arabia","Adventure,Biography,Drama",8.3,75122,228
+"The Longest Day","Action,Drama,History",7.8,42928,178
+"The Music Man","Comedy,Family,Musical",7.7,30549,151
+"Mutiny on the Bounty","Adventure,Drama,History",7.2,4471,178
+"To Kill a Mockingbird","Crime,Drama",8.3,NA,129
+"Tom Jones","Adventure,Comedy,History",6.5,5491,129
+"America America","Drama",7.8,976,174
+"Cleopatra","Biography,Drama,History",7,20541,192
+"How the West Was Won","Western",7.1,NA,164
+"Lilies of the Field","Drama",7.6,6139,94
+"My Fair Lady","Drama,Family,Musical",7.8,NA,170
+"Becket","Biography,Drama,History",7.8,5611,148
+"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","Comedy",8.4,NA,95
+"Mary Poppins","Comedy,Family,Fantasy",7.8,682486,139
+"Zorba the Greek","Comedy,Drama",7.7,7146,142
+"The Sound of Music","Biography,Drama,Family",8,606397,172
+"Darling","Drama,Romance",7.1,2184,128
+"Doctor Zhivago","Drama,Romance,War",8,45777,197
+"Ship of Fools","Drama,Romance,War",7.1,1178,149
+"A Thousand Clowns","Comedy,Drama,Romance",7.4,NA,118
+"A Man for All Seasons","Biography,Drama,History",7.7,9774,120
+"Alfie","Comedy,Drama",7,14669,114
+"The Russians Are Coming, the Russians Are Coming","Comedy,War",7,4763,126
+"The Sand Pebbles","Adventure,Drama,Romance",7.6,5639,182
+"Who's Afraid of Virginia Woolf?","Drama",8,21663,131
+"In the Heat of the Night","Crime,Drama,Mystery",7.9,23185,110
+"Bonnie and Clyde","Action,Biography,Crime",7.8,56566,111
+"Doctor Dolittle","Adventure,Comedy,Family",6.2,73397,152
+"The Graduate","Comedy,Drama,Romance",8,183610,106
+"Guess Who's Coming to Dinner","Comedy,Drama",7.8,38252,108
+"Oliver!","Drama,Family,Musical",7.4,56092,153
+"Funny Girl","Biography,Comedy,Drama",7.4,19884,151
+"The Lion in Winter","Biography,Drama,History",7.9,13105,134
+"Rachel, Rachel","Drama,Romance",7.3,492,101
+"Romeo and Juliet","Drama,Romance",7.6,65196,138
+"Midnight Cowboy","Drama",7.8,40013,113
+"Anne of the Thousand Days","Biography,Drama,History",7.5,3281,145
+"Butch Cassidy and the Sundance Kid","Biography,Crime,Drama",8,71183,110
+"Hello, Dolly!","Adventure,Comedy,Musical",7.1,21196,146
+"Z","Crime,Drama,History",8.3,6526,127
+"Patton","Biography,Drama,War",7.9,43309,172
+"Airport","Action,Drama,Thriller",6.6,11263,137
+"Five Easy Pieces","Drama",7.5,13154,98
+"Love Story","Drama,Romance",6.9,35290,100
+"M*A*S*H","Comedy,Drama,War",7.5,53152,116
+"The French Connection","Action,Crime,Drama",7.7,44341,104
+"A Clockwork Orange","Crime,Drama,Sci-Fi",8.3,436890,136
+"Fiddler on the Roof","Drama,Family,Musical",8,52560,181
+"The Last Picture Show","Drama,Romance",8,14148,118
+"Nicholas and Alexandra","Biography,Drama,History",7.2,1674,183
+"The Godfather","Crime,Drama",9.2,733939,175
+"Cabaret","Drama,Music,Musical",7.8,36098,124
+"Deliverance","Adventure,Drama,Thriller",7.7,49424,109
+"The Emigrants","Drama,History",8,NA,151
+"Sounder","Drama,Family",7.6,NA,105
+"The Sting","Comedy,Crime,Drama",8.3,61731,129
+"American Graffiti","Comedy,Drama",7.4,64618,110
+"Cries and Whispers","Drama",8.1,9251,91
+"The Exorcist","Horror",8,420304,122
+"A Touch of Class","Comedy,Romance",6.5,2032,106
+"The Godfather Part II","Crime,Drama",9,NA,202
+"Chinatown","Drama,Mystery,Thriller",8.2,77911,130
+"The Conversation","Drama,Mystery,Thriller",7.8,35156,113
+"Lenny","Biography,Drama",7.6,6547,111
+"The Towering Inferno","Action,Drama,Thriller",7,28338,165
+"One Flew Over the Cuckoo's Nest","Drama",8.7,279760,133
+"Barry Lyndon","Adventure,Drama,History",8.1,45079,185
+"Dog Day Afternoon","Biography,Crime,Drama",8,110209,125
+"Jaws","Adventure,Thriller",8,944601,124
+"Nashville","Comedy,Drama,Music",7.7,10086,160
+"Rocky","Drama,Sport",8.1,33403994,120
+"All the President's Men","Biography,Drama,History",8,50300,138
+"Bound for Glory","Biography,Drama,Music",7.3,NA,147
+"Network","Drama",8.1,36359,121
+"Taxi Driver","Crime,Drama",8.2,260593,114
+"Annie Hall","Comedy,Romance",8,153745,93
+"The Goodbye Girl","Comedy,Drama,Romance",7.4,7479,111
+"Julia","Drama",7.2,NA,117
+"Star Wars","Action,Adventure,Fantasy",8.6,NA,121
+"The Turning Point","Drama,Romance",6.9,NA,119
+"The Deer Hunter","Drama,War",8.1,103489,183
+"Coming Home","Drama,Romance,War",7.3,NA,127
+"Heaven Can Wait","Comedy,Fantasy,Romance",6.9,13232,101
+"Midnight Express","Biography,Crime,Drama",7.6,31089,121
+"An Unmarried Woman","Comedy,Drama,Romance",7.2,NA,124
+"Kramer vs. Kramer","Drama",7.8,43464,105
+"All That Jazz","Drama,Music,Musical",7.9,NA,123
+"Apocalypse Now","Drama,Mystery,War",8.4,286037,147
+"Breaking Away","Comedy,Drama,Romance",7.7,9343,101
+"Norma Rae","Drama",7.3,NA,114
+"Ordinary People","Drama",7.7,23217,124
+"Coal Miner's Daughter","Biography,Drama,Music",7.5,36305,124
+"The Elephant Man","Biography,Drama",8.1,64544,124
+"Raging Bull","Biography,Drama,Sport",8.2,131407,129
+"Tess","Drama,Romance",7.3,6331,186
+"Chariots of Fire","Biography,Drama,Sport",7.2,37166,125
+"Atlantic City","Crime,Drama,Romance",7.3,5228,104
+"On Golden Pond","Drama",7.6,20566,109
+"Raiders of the Lost Ark","Action,Adventure",8.4,826663,115
+"Reds","Horror,Mystery,Thriller",7.6,NA,127
+"Gandhi","Biography,Drama,History",8,49831,191
+"E.T. the Extra-Terrestrial","Family,Sci-Fi",7.8,NA,115
+"Missing","Biography,Drama,History",7.7,NA,122
+"Tootsie","Comedy,Drama,Romance",7.4,58527,116
+"The Verdict","Drama",7.7,10381,129
+"Terms of Endearment","Comedy,Drama",7.4,36329,132
+"The Big Chill","Comedy,Drama",7.2,22301,105
+"The Dresser","Drama",7.6,1802,118
+"The Right Stuff","Adventure,Biography,Drama",7.8,NA,193
+"Tender Mercies","Drama,Music",7.4,3613,92
+"Amadeus","Biography,Drama,History",8.3,180143,160
+"The Killing Fields","Biography,Drama,History",7.8,23126,141
+"A Passage to India","Adventure,Drama,History",7.3,6936,164
+"Places in the Heart","Drama",7.4,6741,111
+"A Soldier's Story","Crime,Drama,Mystery",7.2,6506,101
+"Out of Africa","Biography,Drama,Romance",7.2,40320,161
+"The Color Purple","Drama",7.8,180874,154
+"Kiss of the Spider Woman","Drama",7.4,7183,120
+"Prizzi's Honor","Comedy,Crime,Drama",6.7,NA,130
+"Witness","Crime,Drama,Romance",7.4,46814,112
+"Platoon","Drama,War",8.1,239850,120
+"Children of a Lesser God","Drama,Romance",7.2,8543,119
+"Hannah and Her Sisters","Comedy,Drama",7.9,31072,107
+"The Mission","Adventure,Drama,History",7.4,38896,125
+"A Room with a View","Drama,Romance",7.3,NA,117
+"The Last Emperor","Biography,Drama,History",7.7,39918,163
+"Broadcast News","Comedy,Drama,Romance",7.2,11001,133
+"Fatal Attraction","Drama,Thriller",6.9,53027,119
+"Hope and Glory","Comedy,Drama,Romance",7.3,NA,113
+"Moonstruck","Comedy,Drama,Romance",7.1,44806,102
+"Rain Man","Drama",8,314120,133
+"The Accidental Tourist","Drama,Romance",6.8,6208,121
+"Dangerous Liaisons","Drama,Romance",7.6,46589,119
+"Mississippi Burning","Crime,Drama,History",7.8,39455,128
+"Working Girl","Comedy,Drama,Romance",6.8,33603,113
+"Driving Miss Daisy","Drama",7.4,NA,99
+"Born on the Fourth of July","Biography,Drama,War",7.2,59360,145
+"Dead Poets Society","Comedy,Drama",8.1,307114,128
+"Field of Dreams","Drama,Family,Fantasy",7.5,192920,107
+"My Left Foot","Biography,Drama",7.9,26763,103
+"Dances with Wolves","Adventure,Drama,Western",8,NA,181
+"Awakenings","Biography,Drama",7.8,55182,121
+"Ghost","Drama,Fantasy,Romance",7.1,469588,127
+"The Godfather Part III","Crime,Drama",7.6,NA,162
+"Goodfellas","Biography,Crime,Drama",8.7,NA,146
+"The Silence of the Lambs","Crime,Drama,Thriller",8.6,847028,118
+"Beauty and the Beast","Animation,Family,Fantasy",8,760077,84
+"Bugsy","Biography,Crime,Drama",6.8,10228,136
+"JFK","Drama,History,Thriller",8,62583,189
+"The Prince of Tides","Drama,Romance",6.7,9233,132
+"Unforgiven","Drama,Western",8.2,122729,130
+"The Crying Game","Crime,Drama,Romance",7.3,31834,112
+"A Few Good Men","Drama,Thriller",7.7,325423,138
+"Howards End","Drama,Romance",7.4,13673,142
+"Scent of a Woman","Drama",8,119250,156
+"Schindler's List","Biography,Drama,History",8.9,411608,195
+"The Fugitive","Action,Crime,Drama",7.8,267812,130
+"In the Name of the Father","Biography,Crime,Drama",8.1,41328,133
+"The Piano","Drama,Music,Romance",7.6,48469,121
+"The Remains of the Day","Drama,Romance",7.8,24343,134
+"Forrest Gump","Drama,Romance",8.8,1244237,142
+"Four Weddings and a Funeral","Comedy,Drama,Romance",7.1,185024,117
+"Pulp Fiction","Crime,Drama",8.9,1127813,154
+"Quiz Show","Biography,Drama,History",7.5,31595,133
+"The Shawshank Redemption","Drama",9.3,886485,142
+"Braveheart","Biography,Drama,History",8.3,32708456,178
+"Apollo 13","Adventure,Drama,History",7.6,432986,140
+"Babe","Comedy,Drama,Family",6.8,508807,91
+"The Postman (Il Postino)","Biography,Comedy,Drama",7.7,NA,108
+"Sense and Sensibility","Drama,Romance",7.7,NA,136
+"The English Patient","Drama,Romance,War",7.4,81711,162
+"Fargo","Crime,Drama,Thriller",8.1,234273,98
+"Jerry Maguire","Comedy,Drama,Romance",7.3,NA,139
+"Secrets & Lies","Comedy,Drama",8,NA,136
+"Shine","Biography,Drama,Music",7.7,30884,105
+"Titanic","Drama,Romance",7.8,35797635,194
+"As Good as It Gets","Comedy,Drama,Romance",7.7,378698,139
+"The Full Monty","Comedy,Drama",7.2,180109,91
+"Good Will Hunting","Drama,Romance",8.3,364798,126
+"L.A. Confidential","Crime,Drama,Mystery",8.2,150735,138
+"Shakespeare in Love","Comedy,Drama,History",7.1,226989,123
+"Elizabeth","Biography,Drama,History",7.4,63472,124
+"Life Is Beautiful","Comedy,Drama,Romance",8.6,NA,116
+"Saving Private Ryan","Drama,War",8.6,993261,169
+"The Thin Red Line","Drama,War",7.6,148681,170
+"American Beauty","Drama",8.3,660578,122
+"The Cider House Rules","Drama,Romance",7.4,53501,126
+"The Green Mile","Crime,Drama,Fantasy",8.6,813775,189
+"The Insider","Biography,Drama,Thriller",7.8,59195,157
+"The Sixth Sense","Drama,Mystery,Thriller",8.1,1036685,107
+"Gladiator","Action,Adventure,Drama",8.5,34128168,155
+"Chocolat","Drama,Romance",7.2,328939,121
+"Crouching Tiger, Hidden Dragon","Action,Adventure,Fantasy",7.8,NA,120
+"Erin Brockovich","Biography,Drama",7.4,418647,131
+"Traffic","Crime,Drama,Thriller",7.6,190385,147
+"A Beautiful Mind","Biography,Drama",8.2,490923,135
+"Gosford Park","Comedy,Drama,Mystery",7.2,48527,131
+"In the Bedroom","Crime,Drama",7.4,20122,131
+"The Lord of the Rings: The Fellowship of the Ring","Action,Adventure,Drama",8.8,1355751,178
+"Moulin Rouge!","Drama,Musical,Romance",7.6,505231,127
+"Chicago","Comedy,Crime,Musical",7.2,439544,113
+"Gangs of New York","Crime,Drama",7.5,294323,167
+"The Hours","Drama,Romance",7.5,85936,110
+"The Lord of the Rings: The Two Towers","Action,Adventure,Drama",8.7,1341428,179
+"The Pianist","Biography,Drama,Music",8.5,253230,150
+"The Lord of the Rings: The Return of the King","Action,Adventure,Drama",8.9,34679773,201
+"Lost in Translation","Comedy,Drama",7.7,NA,102
+"Master and Commander: The Far Side of the World","Action,Adventure,Drama",7.4,141077,138
+"Mystic River","Crime,Drama,Mystery",7.9,203535,138
+"Seabiscuit","Drama,History,Sport",7.3,118428,140
+"Million Dollar Baby","Drama,Sport",8.1,405053,132
+"The Aviator","Biography,Drama",7.5,207578,170
+"Finding Neverland","Biography,Drama,Family",7.7,465413,106
+"Ray","Biography,Drama,Music",7.7,214558,152
+"Sideways","Comedy,Drama,Romance",7.5,197689,127
+"Crash","Crime,Drama,Thriller",7.7,442331,112
+"Brokeback Mountain","Drama,Romance",7.7,519853,134
+"Capote","Biography,Crime,Drama",7.3,115946,114
+"Good Night, and Good Luck","Biography,Drama,History",7.4,NA,93
+"Munich","Action,Drama,History",7.5,330206,164
+"The Departed","Crime,Drama,Thriller",8.5,737806,151
+"Babel","Drama",7.4,377310,143
+"Letters from Iwo Jima","Action,Adventure,Drama",7.9,341085,141
+"Little Miss Sunshine","Comedy,Drama",7.8,427127,101
+"The Queen","Biography,Drama,History",7.3,175607,103
+"No Country for Old Men","Crime,Drama,Thriller",8.1,399154,122
+"Atonement","Drama,Mystery,Romance",7.8,227149,123
+"Juno","Comedy,Drama",7.4,549481,96
+"Michael Clayton","Crime,Drama,Mystery",7.2,299971,119
+"There Will Be Blood","Drama",8.2,255192,158
+"Slumdog Millionaire","Drama,Romance",8,1155769,120
+"The Curious Case of Benjamin Button","Drama,Fantasy,Romance",7.8,690720,166
+"Frost/Nixon","Biography,Drama,History",7.7,109836,122
+"Milk","Biography,Drama",7.5,178019,128
+"The Reader","Drama,Romance",7.6,206910,124
+"The Hurt Locker","Drama,Thriller,War",7.5,NA,131
+"Avatar","Action,Adventure,Fantasy",7.8,1382566,162
+"The Blind Side","Biography,Drama,Sport",7.6,431835,129
+"District 9","Action,Sci-Fi,Thriller",7.9,1178535,112
+"An Education","Drama",7.3,54962,100
+"Inglourious Basterds","Adventure,Drama,War",8.3,775878,153
+"Precious: Based on the Novel 'Push' by Sapphire","Drama",7.3,NA,110
+"A Serious Man","Comedy,Drama",7.1,63118,106
+"Up","Animation,Adventure,Comedy",8.2,1204027,96
+"Up in the Air","Comedy,Drama,Romance",7.4,228473,109
+"The King's Speech","Biography,Drama,History",8,144575,118
+"127 Hours","Biography,Drama",7.5,95883,94
+"Black Swan","Drama,Thriller",8,178032,108
+"The Fighter","Biography,Drama,Sport",7.8,121498,116
+"Inception","Action,Adventure,Sci-Fi",8.8,571078,148
+"The Kids Are All Right","Comedy,Drama,Romance",7,63588,106
+"The Social Network","Biography,Drama",7.7,204126,120
+"Toy Story 3","Animation,Adventure,Comedy",8.2,607537,103
+"True Grit","Drama,Western",7.6,158268,110
+"Winter's Bone","Drama,Mystery",7.2,51756,100
+"The Artist","Comedy,Drama,Romance",7.9,58629,100
+"The Descendants","Comedy,Drama",7.3,69968,115
+"Extremely Loud & Incredibly Close","Adventure,Drama,Mystery",6.9,NA,129
+"The Help","Drama",8,107868,146
+"Hugo","Drama,Family,Fantasy",7.5,82865,126
+"Midnight in Paris","Comedy,Fantasy,Romance",7.7,82553,94
+"Moneyball","Biography,Drama,Sport",7.6,91772,133
+"The Tree of Life","Drama,Fantasy",6.8,60899,139
+"War Horse","Action,Adventure,Drama",7.2,69714,146
+"Argo","Biography,Drama,Thriller",7.7,208711,120
+"Amour","Drama",7.9,20897,127
+"Beasts of the Southern Wild","Adventure,Drama,Fantasy",7.3,39335,93
+"Django Unchained","Drama,Western",8.4,429231,165
+"Life of Pi","Adventure,Drama,Fantasy",7.9,169196,127
+"Lincoln","Crime,Drama,Mystery",7.3,NA,118
+"Les Misérables","Drama,History,Musical",7.6,265259,158
+"Silver Linings Playbook","Comedy,Drama,Romance",7.7,260499,122
+"Zero Dark Thirty","Drama,History,Thriller",7.4,NA,157
+"12 Years a Slave","Biography,Drama,History",8.1,140313,134
+"American Hustle","Crime,Drama",7.2,175937,138
+"Captain Phillips","Adventure,Biography,Crime",7.8,152496,134
+"Dallas Buyers Club","Biography,Drama",8,92788,117
+"Gravity","Drama,Sci-Fi,Thriller",7.7,303162,91
+"Her","Drama,Romance,Sci-Fi",8,101535,126
+"Nebraska","Adventure,Comedy,Drama",7.7,44798,115
+"Philomena","Biography,Comedy,Drama",7.6,52399,98
+"The Wolf of Wall Street","Biography,Crime,Drama",8.2,180827,180
+"Birdman or (The Unexpected Virtue of Ignorance)","Comedy,Drama",7.7,NA,119
+"American Sniper","Action,Biography,Drama",7.3,NA,133
+"Boyhood","Drama",7.9,89725,165
+"The Grand Budapest Hotel","Adventure,Comedy,Crime",8.1,97547,99
+"The Imitation Game","Biography,Drama,Thriller",8,103920,114
+"Selma","Biography,Drama,History",7.5,61482,128
+"The Theory of Everything","Biography,Drama,Romance",7.7,75918,123
+"Whiplash","Drama,Music",8.5,70212,106
+"Spotlight","Biography,Crime,Drama",8.1,70385,129
+"The Big Short","Biography,Comedy,Drama",7.8,69098,130
+"Bridge of Spies","Drama,History,Thriller",7.6,65466,142
+"Brooklyn","Drama,Romance",7.5,46857,117
+"Mad Max: Fury Road","Action,Adventure,Sci-Fi",8.1,128344,120
+"The Martian","Adventure,Drama,Sci-Fi",8,131656,144
+"The Revenant","Action,Adventure,Drama",8,105270,156
+"Room","Drama,Thriller",8.1,49668,118
+"Moonlight","Drama",7.4,45533,111
+"Arrival","Drama,Sci-Fi",7.9,83315,116
+"Fences","Drama",7.2,36228,139
+"Hacksaw Ridge","Biography,Drama,History",8.1,55594,139
+"Hell or High Water","Action,Crime,Drama",7.6,40088,102
+"Hidden Figures","Biography,Drama,History",7.8,NA,127
+"La La Land","Comedy,Drama,Music",8,71314,128
+"Lion","Biography,Drama",8,39787,118
+"Manchester by the Sea","Drama",7.8,50194,137
+"The Shape of Water","Adventure,Drama,Fantasy",7.3,25784,123
+"Call Me by Your Name","Drama,Romance",7.9,NA,132
+"Darkest Hour","Biography,Drama,History",7.4,14004,125
+"Dunkirk","Action,Drama,History",7.8,68676,106
+"Get Out","Horror,Mystery,Thriller",7.7,75461,104
+"Lady Bird","Comedy,Drama",7.4,22610,94
+"Phantom Thread","Drama,Romance",7.5,NA,130
+"The Post","Drama",7.2,NA,116
+"Three Billboards Outside Ebbing, Missouri","Comedy,Crime,Drama",8.1,22869,115
+"Green Book","Biography,Comedy,Drama",8.2,10093,130
+"Black Panther","Action,Adventure,Sci-Fi",7.3,88211,134
+"BlacKkKlansman","Biography,Comedy,Crime",7.5,11251,135
+"Bohemian Rhapsody","Biography,Drama,Music",7.9,23296,134
+"The Favourite","Biography,Comedy,Drama",7.5,7189,119
+"Roma","Drama",7.7,5521,135
+"A Star Is Born","Drama,Music,Romance",7.6,20442,136
+"Vice","Biography,Comdey,Drama",7.2,5061,132
+"Parasite","Comedy,Drama,Thriller",8.6,NA,132
+"1917","Action,Drama,War",8.3,NA,119
+"Ford v Ferrari","Action,Biography,Drama",8.1,NA,152
+"The Irishman","Biography,Crime,Drama",7.8,1057,209
+"Jojo Rabbit","Comedy,Drama,War",7.9,NA,108
+"Joker","Crime,Drama,Thriller",8.4,66303,122
+"Little Women","Drama,Romance",7.8,NA,135
+"Marriage Story","Comedy,Drama,Romance",7.9,184,137
+"Once Upon a Time in Hollywood","Comedy,Drama",7.6,NA,161
+"Nomadland","Drama",7.4,NA,107
+"The Father","Drama",8.3,NA,97
+"Judas and the Black Messiah","Biography,Drama,History",7.5,NA,126
+"Mank","Biography,Comedy,Drama",6.9,NA,131
+"Minari","Drama",7.5,NA,115
+"Promising Young Woman","Crime,Drama,Thriller",7.5,NA,113
+"Sound of Metal","Drama,Music",7.8,NA,120
+"The Trial of the Chicago 7","Drama,History,Thriller",7.8,NA,129
